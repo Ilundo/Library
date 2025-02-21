@@ -7,9 +7,9 @@ class LibraryBook(models.Model):
     available = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['author']  # Сортування за автором
+        ordering = ['author'] 
         indexes = [
-            models.Index(fields=['isbn']),  # Унікальний індекс на поле isbn
+            models.Index(fields=['isbn']),
         ]
     
     def __str__(self):
